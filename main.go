@@ -50,16 +50,12 @@ func main() {
 		fmt.Printf("sk: %s\n ", hex.EncodeToString(sk.Bytes()))
 	case "merge":
 		mergeCmd.Parse(os.Args[2:])
-		sk, wifSk, addr, err := cmd.MergeKeys(*hbcSlice, *shopSlice, *chainNam)
+		sk, addr, err := cmd.MergeKeys(*hbcSlice, *shopSlice, *chainNam)
 		if err != nil {
 			common.Logger.Errorf("%s", err)
 			os.Exit(1)
 		}
-		if wifSk != "" {
-			fmt.Printf("privkey: %s\n", wifSk)
-		} else {
-			fmt.Printf("privkey: %s\n", hex.EncodeToString(sk.Bytes()))
-		}
+		fmt.Printf("privkey: %s\n", sk)
 		fmt.Printf("address: %s\n", addr)
 	case "balance":
 		balanceCmd.Parse(os.Args[2:])

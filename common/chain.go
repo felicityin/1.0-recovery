@@ -34,6 +34,46 @@ const (
 	BaseChain        = "Base Chain"
 )
 
+// coin
+const (
+	BTC           = "btc"
+	BTC_TEST      = "btc_test"
+	LTC           = "ltc"
+	DOGE          = "doge"
+	ETH           = "eth"
+	BCH           = "bch"
+	BNB_BSC       = "bnb_bsc"
+	HT_HECO       = "ht_heco"
+	TRX           = "trx"
+	MATIC_POLYGON = "matic_polygon"
+	ETH_ARBITRUM  = "eth_arbitrum"
+	APT           = "apt"
+	SOL           = "sol"
+	DOT           = "dot"
+	USDT          = "usdt"
+	HC            = "hc"
+	DASH          = "dash"
+	DCR           = "dcr"
+	RVN           = "rvn"
+	OKT           = "okt"
+	CMP           = "cmp"
+	FTM           = "ftm"
+	SMARTBCH      = "smartbch"
+	ETH_AURORA    = "eth_aurora"
+	WEMIX         = "wemix"
+	GDCC          = "gdcc"
+	ETH_ZKSYNC    = "eth_zksync"
+	ETHG          = "ethg"
+	CORE          = "core"
+	MBE           = "mbe"
+	ETHW          = "ethw"
+	REI           = "rei"
+	ETH_OPTIMISM  = "eth_optimism"
+	MOVR          = "movr"
+	AVAX_C        = "avax_c"
+	ETH_BASE      = "eth_base"
+)
+
 func IsEddsaChain(chain string) bool {
 	return chain == "sol" || chain == "apt" || chain == "dot"
 }

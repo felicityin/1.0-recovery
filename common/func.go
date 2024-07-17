@@ -7,8 +7,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"1.0-recovery/crypto"
+	"github.com/btcsuite/btcd/btcec"
+	"github.com/btcsuite/btcutil"
 	"github.com/mr-tron/base58"
+
+	"1.0-recovery/crypto"
 )
 
 var b58Alphabet = []byte("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
@@ -167,4 +170,32 @@ func CalcWifPrivKey(hexPrivkey string, compressed bool) []byte {
 
 	base58result := Base58Encode(result)
 	return base58result
+}
+
+func FormatPrivKey(chain string, privKeyBytes []byte) string {
+	if chain == BTC || chain == LTC || chain == DOGE || chain == BCH || chain == TRX {
+		wif := &btcutil.WIF{}
+		priv, _ := btcec.PrivKeyFromBytes(btcec.S256(), privKeyBytes)
+
+		switch chain {
+		case BTC:
+			param := &BTCParams
+			wif, _ = btcutil.NewWIF(priv, param, true)
+		case DOGE:
+			param := &DOGEParams
+			wif, _ = btcutil.NewWIF(priv, param, true)
+		case LTC:
+			param := &LTCParams
+			wif, _ = btcutil.NewWIF(priv, param, true)
+		case BCH:
+			param := &BCHParams
+			wif, _ = btcutil.NewWIF(priv, param, true)
+		case TRX:
+			param := &TRXParams
+			wif, _ = btcutil.NewWIF(priv, param, true)
+		}
+		return wif.String()
+	}
+
+	return hex.EncodeToString(privKeyBytes)
 }
