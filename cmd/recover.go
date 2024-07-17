@@ -22,10 +22,11 @@ type RecoveryInput struct {
 }
 
 type Node struct {
-	Role      string `yaml:"role"`
-	PkContent string `yaml:"pk_content"`
-	Pwd       string `yaml:"pwd"`
-	Eccsk     string `yaml:"eccsk"`
+	Role      string     `yaml:"role"`
+	PkContent string     `yaml:"pk_content"`
+	Pwd       string     `yaml:"pwd"`
+	Eccsk     string     `yaml:"eccsk"`
+	Kms       common.Kms `yaml:"kms"`
 }
 
 func RecoverKey(paramsPath string) (*big.Int, error) {
@@ -77,7 +78,7 @@ func decryptSkSlice(node Node, address string) (*big.Int, *big.Int, error) {
 		return nil, nil, fmt.Errorf("hex decode eccsk err: %s", err.Error())
 	}
 
-	plsBytes, err := common.DecryptSaveData(node.PkContent, node.Role, address, node.Pwd, eccsk)
+	plsBytes, err := common.DecryptSaveData(node.PkContent, node.Role, address, node.Pwd, eccsk, node.Kms)
 	if err != nil {
 		return nil, nil, err
 	}

@@ -7,6 +7,7 @@ import (
 )
 
 type Kms struct {
+	Enable          bool   `yaml:"enable" json:"enable"`
 	RegionId        string `yaml:"region_id" json:"region_id"`
 	Domain          string `yaml:"domain" json:"domain"`
 	AccessKeyId     string `yaml:"access_key_id" json:"access_key_id"`

@@ -13,7 +13,7 @@ import (
 
 var b58Alphabet = []byte("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
 
-func DecryptSaveData(saveData, role string, address string, pwd string, eccsk []byte) (save []byte, err error) {
+func DecryptSaveData(saveData, role string, address string, pwd string, eccsk []byte, kms Kms) (save []byte, err error) {
 	var skBytes []byte
 
 	if role == "shop" {
@@ -24,6 +24,12 @@ func DecryptSaveData(saveData, role string, address string, pwd string, eccsk []
 		}
 		skBytes = eccsk
 	} else {
+		if kms.Enable {
+			pwd, err = KmsDecrypt(kms, pwd)
+			if err != nil {
+				return nil, fmt.Errorf("kms decrypt err: %s", err.Error())
+			}
+		}
 		pwdBytes, err := base58.Decode(pwd)
 		if err != nil {
 			return nil, fmt.Errorf("base58 decode pwd err: %s", err.Error())
