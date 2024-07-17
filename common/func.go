@@ -173,7 +173,7 @@ func CalcWifPrivKey(hexPrivkey string, compressed bool) []byte {
 }
 
 func FormatPrivKey(chain string, privKeyBytes []byte) string {
-	if chain == BTC || chain == LTC || chain == DOGE || chain == BCH || chain == TRX {
+	if chain == BTC || chain == LTC || chain == DOGE || chain == BCH {
 		wif := &btcutil.WIF{}
 		priv, _ := btcec.PrivKeyFromBytes(btcec.S256(), privKeyBytes)
 
@@ -189,9 +189,6 @@ func FormatPrivKey(chain string, privKeyBytes []byte) string {
 			wif, _ = btcutil.NewWIF(priv, param, true)
 		case BCH:
 			param := &BCHParams
-			wif, _ = btcutil.NewWIF(priv, param, true)
-		case TRX:
-			param := &TRXParams
 			wif, _ = btcutil.NewWIF(priv, param, true)
 		}
 		return wif.String()

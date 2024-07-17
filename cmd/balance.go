@@ -7,7 +7,6 @@ import (
 
 	"github.com/shopspring/decimal"
 
-	"1.0-recovery/common"
 	"1.0-recovery/common/code"
 	"1.0-recovery/tx/apt"
 	"1.0-recovery/tx/dot"
@@ -106,18 +105,5 @@ func GetBalance(chain, url, addr, coinAddress string) (*BalanceResult, error) {
 		}, nil
 	default:
 		return nil, code.NewI18nError(code.ChainParamErr, fmt.Sprintf("Unsupported chain: %s", chain))
-	}
-}
-
-func ShortChainName(chain string) string {
-	switch chain {
-	case common.SolanaChain:
-		return "sol"
-	case common.AptostChain:
-		return "apt"
-	case common.PolkadotChain:
-		return "dot"
-	default:
-		return ""
 	}
 }
