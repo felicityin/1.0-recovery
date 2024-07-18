@@ -25,8 +25,6 @@ require (
 require (
 	filippo.io/edwards25519 v1.1.0
 	github.com/alecthomas/gometalinter v3.0.0+incompatible
-	github.com/blocktree/go-owcdrivers v1.2.27
-	github.com/blocktree/go-owcrypt v1.1.13
 	github.com/blocto/solana-go-sdk v1.30.0
 	github.com/bnb-chain/edwards25519 v0.0.0-20231030070956-6796d47b70ba
 	github.com/btcsuite/btcd v0.23.0
@@ -43,11 +41,9 @@ require (
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/drand/kyber v1.1.4 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hasura/go-graphql-client v0.9.1 // indirect
 	github.com/klauspost/compress v1.16.0 // indirect
-	github.com/phoreproject/bls v0.0.0-20200525203911-a88a5ae26844 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
@@ -76,7 +72,7 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.16.0 // indirect
-	golang.org/x/crypto v0.22.0
+	golang.org/x/crypto v0.22.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/ini.v1 v1.67.0 // indirect
