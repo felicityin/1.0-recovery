@@ -30,7 +30,6 @@ require (
 	github.com/blocto/solana-go-sdk v1.30.0
 	github.com/bnb-chain/edwards25519 v0.0.0-20231030070956-6796d47b70ba
 	github.com/btcsuite/btcd v0.23.0
-	github.com/btcsuite/btcd/btcec/v2 v2.2.0
 	github.com/btcsuite/btcd/btcutil v1.1.3
 	github.com/btcsuite/btcutil v0.0.0-20190425235716-9e5f4b9a998d
 	github.com/fbsobreira/gotron-sdk v0.0.0-20230907131216-1e824406fe8c
@@ -42,6 +41,7 @@ require (
 )
 
 require (
+	github.com/btcsuite/btcd/btcec/v2 v2.2.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/drand/kyber v1.1.4 // indirect
 	github.com/google/uuid v1.3.0 // indirect

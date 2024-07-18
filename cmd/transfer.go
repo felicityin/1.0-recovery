@@ -8,7 +8,6 @@ import (
 
 	"1.0-recovery/common/code"
 	"1.0-recovery/tx/apt"
-	"1.0-recovery/tx/dot"
 	"1.0-recovery/tx/sol"
 )
 
@@ -47,16 +46,6 @@ func Transfer(chain, url, privkey, toAddr, amount, coinAddress string) (string, 
 		txHash, err := apt.Transfer("", priv, toAddr, amountDec)
 		if err != nil {
 			return "", fmt.Errorf("[apt] transfer err: %s", err.Error())
-		}
-		return txHash, nil
-	case "dot":
-		if url == SolNode || url == "" {
-			url = DotNode
-		}
-		dot := dot.NewDot(url)
-		txHash, err := dot.Transfer("", priv, toAddr, amountDec)
-		if err != nil {
-			return "", fmt.Errorf("[dot] transfer err: %s", err.Error())
 		}
 		return txHash, nil
 	default:
