@@ -37,6 +37,8 @@ Shop node
 
 ## Merge Privkey Slices
 
+Supported chains: btc, eth, trx, bsc, ltc, heco, doge, sol
+
 ```
 1.0-recovery merge -hbc 0b0d3933261ddbbce6ce4da24537aac8af78fc683532ce797c8a2d2e590a772b -shop 040e95207ece8ef6ef58d90c6fe365f3a3cf7bb7d55094c23d7e1d6e5d3549dd -chain sol
 ```
