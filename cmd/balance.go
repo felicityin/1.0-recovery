@@ -9,7 +9,6 @@ import (
 
 	"1.0-recovery/common/code"
 	"1.0-recovery/tx/apt"
-	"1.0-recovery/tx/dot"
 	"1.0-recovery/tx/sol"
 )
 
@@ -87,20 +86,6 @@ func GetBalance(chain, url, addr, coinAddress string) (*BalanceResult, error) {
 		return &BalanceResult{
 			Balance:  fmt.Sprintf("%v", balance),
 			Decimals: "8",
-			Amount:   amount,
-		}, nil
-	case "dot":
-		if url == SolNode || url == "" {
-			url = DotNode
-		}
-		dot := dot.NewDot(url)
-		balance, amount, err := dot.Balance(addr)
-		if err != nil {
-			return nil, fmt.Errorf("get balance err: %s", err.Error())
-		}
-		return &BalanceResult{
-			Balance:  fmt.Sprintf("%v", balance),
-			Decimals: "10",
 			Amount:   amount,
 		}, nil
 	default:
