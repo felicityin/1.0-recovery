@@ -8,8 +8,8 @@ import (
 	e "github.com/agl/ed25519/edwards25519"
 	"github.com/decred/dcrd/dcrec/edwards/v2"
 
-	"1.0-recovery/common"
-	"1.0-recovery/crypto"
+	"recovery-key/common"
+	"recovery-key/crypto"
 )
 
 func Pubkey(privkey []byte) *edwards.PublicKey {

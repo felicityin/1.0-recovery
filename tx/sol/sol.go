@@ -11,9 +11,9 @@ import (
 	"github.com/mr-tron/base58"
 	"github.com/shopspring/decimal"
 
-	cm "1.0-recovery/common"
-	"1.0-recovery/tx/eddsa"
-	"1.0-recovery/tx/sol/solana-adapter/common"
+	cm "recovery-key/common"
+	"recovery-key/tx/eddsa"
+	"recovery-key/tx/sol/solana-adapter/common"
 )
 
 func CalcAddress(privkey []byte) string {

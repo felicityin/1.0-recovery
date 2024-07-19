@@ -12,7 +12,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"1.0-recovery/common"
+	"recovery-key/common"
 )
 
 const (

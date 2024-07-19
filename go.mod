@@ -1,4 +1,4 @@
-module 1.0-recovery
+module recovery-key
 
 go 1.21.4
 

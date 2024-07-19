@@ -15,7 +15,7 @@ import (
 	"github.com/blocto/solana-go-sdk/types"
 	"github.com/shopspring/decimal"
 
-	"1.0-recovery/tx/eddsa"
+	"recovery-key/tx/eddsa"
 )
 
 type solanaPackagerV2 struct {

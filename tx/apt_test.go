@@ -8,7 +8,7 @@ import (
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"
 
-	"1.0-recovery/tx/apt"
+	"recovery-key/tx/apt"
 )
 
 func TestAptTransfer(t *testing.T) {

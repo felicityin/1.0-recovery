@@ -12,8 +12,8 @@ import (
 	eddsaKeygen "github.com/bnb-chain/tss-lib/eddsa/keygen"
 	"github.com/decred/dcrd/dcrec/edwards/v2"
 
-	"1.0-recovery/common"
-	"1.0-recovery/crypto"
+	"recovery-key/common"
+	"recovery-key/crypto"
 )
 
 type RecoveryInput struct {

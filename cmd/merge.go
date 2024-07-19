@@ -8,8 +8,8 @@ import (
 
 	"github.com/decred/dcrd/dcrec/edwards/v2"
 
-	"1.0-recovery/common"
-	"1.0-recovery/crypto"
+	"recovery-key/common"
+	"recovery-key/crypto"
 )
 
 func MergeKeys(hbcSlice string, shopSlice string, chain string) (string, string, error) {

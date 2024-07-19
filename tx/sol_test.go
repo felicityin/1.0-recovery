@@ -10,8 +10,8 @@ import (
 	"github.com/shopspring/decimal"
 	"github.com/stretchr/testify/assert"
 
-	"1.0-recovery/tx/sol"
-	so "1.0-recovery/tx/sol/solana-adapter/common"
+	"recovery-key/tx/sol"
+	so "recovery-key/tx/sol/solana-adapter/common"
 )
 
 // faucet: https://faucet.quicknode.com/solana/testnet

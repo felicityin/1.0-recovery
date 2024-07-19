@@ -8,7 +8,7 @@ import (
 
 	"github.com/bnb-chain/tss-lib/common"
 
-	"1.0-recovery/cmd"
+	"recovery-key/cmd"
 )
 
 func main() {

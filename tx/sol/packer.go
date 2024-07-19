@@ -11,9 +11,9 @@ import (
 	"github.com/blocto/solana-go-sdk/types"
 	"github.com/shopspring/decimal"
 
-	"1.0-recovery/tx/eddsa"
-	solanaCommon "1.0-recovery/tx/sol/solana-adapter/common"
-	"1.0-recovery/tx/sol/solana-adapter/transaction"
+	"recovery-key/tx/eddsa"
+	solanaCommon "recovery-key/tx/sol/solana-adapter/common"
+	"recovery-key/tx/sol/solana-adapter/transaction"
 )
 
 const (

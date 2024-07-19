@@ -10,7 +10,7 @@ import (
 	"github.com/portto/aptos-go-sdk/models"
 	"github.com/shopspring/decimal"
 
-	"1.0-recovery/tx/eddsa"
+	"recovery-key/tx/eddsa"
 )
 
 type aptPackager struct {

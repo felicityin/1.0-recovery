@@ -18,8 +18,8 @@ import (
 	"github.com/shopspring/decimal"
 	"github.com/the729/lcs"
 
-	"1.0-recovery/crypto"
-	"1.0-recovery/tx/eddsa"
+	"recovery-key/crypto"
+	"recovery-key/tx/eddsa"
 )
 
 func CalcAddress(privkey []byte) string {

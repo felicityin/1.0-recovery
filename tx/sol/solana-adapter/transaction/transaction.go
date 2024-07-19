@@ -14,7 +14,7 @@ import (
 
 	"github.com/btcsuite/btcutil/base58"
 
-	"1.0-recovery/tx/sol/solana-adapter/account"
+	"recovery-key/tx/sol/solana-adapter/account"
 )
 
 type AccountMeta struct {

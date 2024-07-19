@@ -19,7 +19,7 @@ import (
 	"github.com/blocto/solana-go-sdk/types"
 	"github.com/btcsuite/btcutil/base58"
 
-	"1.0-recovery/tx/sol/solana-adapter/common"
+	"recovery-key/tx/sol/solana-adapter/common"
 )
 
 type TokenTransferParams struct {

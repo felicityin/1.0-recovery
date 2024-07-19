@@ -6,9 +6,9 @@ import (
 
 	"github.com/shopspring/decimal"
 
-	"1.0-recovery/common/code"
-	"1.0-recovery/tx/apt"
-	"1.0-recovery/tx/sol"
+	"recovery-key/common/code"
+	"recovery-key/tx/apt"
+	"recovery-key/tx/sol"
 )
 
 func Transfer(chain, url, privkey, toAddr, amount, coinAddress string) (string, error) {
