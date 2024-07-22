@@ -23,6 +23,7 @@ nodes:
     access_key_id: 1111111
     access_key_secret: 1111111
     key_id: 1111111
+-
   role: risk
   pk_content: 111
   pwd: 111
