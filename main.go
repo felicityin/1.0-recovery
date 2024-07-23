@@ -64,6 +64,7 @@ func main() {
 			common.Logger.Errorf("%s", err)
 			os.Exit(1)
 		}
+		fmt.Printf("chain: %s\n", *chain)
 		fmt.Printf("balance: %s\n", amount.Balance)
 		fmt.Printf("decimals: %s\n", amount.Decimals)
 		fmt.Printf("amount: %s\n", amount.Amount)
@@ -75,6 +76,7 @@ func main() {
 			common.Logger.Errorf("%s", err)
 			os.Exit(1)
 		}
+		fmt.Printf("chain: %s\n", *chainName)
 		fmt.Printf("tx: %s/%s\n", cmd.Scan(*chainName), txHash)
 	default:
 		fmt.Println("expected 'recover', 'balance' or 'transfer' subcommands")
